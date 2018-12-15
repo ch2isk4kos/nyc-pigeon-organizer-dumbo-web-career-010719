@@ -57,7 +57,7 @@
 # # Solution 2:
 # def nyc_pigeon_organizer (data)
 #     final = {}
-# 
+#
 #     data.each do |first_level, all_other|
 #         all_other.each do |category, array|
 #             array.each do |name|
@@ -65,9 +65,9 @@
 #             end
 #         end
 #     end
-# 
+#
 #     x = final.keys
-# 
+#
 #     data[:color].each do |bird_color, name|
 #         name.each do |bird_name|
 #             x.each do |item|
@@ -77,7 +77,7 @@
 #             end
 #         end
 #     end
-# 
+#
 #     data[:gender].each do |gender, type|
 #         type.each do |bird_name|
 #             x.each do |item|
@@ -87,7 +87,7 @@
 #             end
 #         end
 #     end
-# 
+#
 #     data[:lives].each do |location, name|
 #         name.each do |bird_name|
 #             x.each do |item|
@@ -103,7 +103,7 @@
 # Solution 3:
 def nyc_pigeon_organizer(data)
   new_hash = Hash.new
-  name_array = Array.new 
+  name_array = Array.new
   data.each do |kx, x| #x = color,gender,lives
       x.each do |ky, y| #y = array of subColor,subGender,subLives
         y.each do |z| #z = "name"

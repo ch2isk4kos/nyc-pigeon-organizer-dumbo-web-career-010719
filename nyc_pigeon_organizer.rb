@@ -30,29 +30,29 @@
 # end
 
 # Solution 1:
-# def nyc_pigeon_organizer(data)
-#     # write your code here!
-#     new_hash = {}
-#
-#     data.each do |property, hash|
-#         hash.each do |attribute, array|
-#             array.each do |name|
-#                 if !new_hash.has_key?(name)
-#                     new_hash[name] = {}
-#                 end
-#
-#                 if !new_hash[name].has_key?(property)
-#                     new_hash[name][property] = []
-#                 end
-#
-#                 if !new_hash[name][property].include?(attribute)
-#                     new_hash[name][property] << attribute.to_s
-#                 end
-#             end
-#         end
-#     end
-#     new_hash
-# end
+def nyc_pigeon_organizer(data)
+    # write your code here!
+    new_hash = {}
+
+    data.each do |property, hash|
+        hash.each do |attribute, array|
+            array.each do |name|
+                if !new_hash.has_key?(name)
+                    new_hash[name] = {}
+                end
+
+                if !new_hash[name].has_key?(property)
+                    new_hash[name][property] = []
+                end
+
+                if !new_hash[name][property].include?(attribute)
+                    new_hash[name][property] << attribute.to_s
+                end
+            end
+        end
+    end
+    new_hash
+end
 
 # # Solution 2:
 # def nyc_pigeon_organizer (data)
@@ -100,27 +100,5 @@
 #     return final
 # end
 
-# Solution 3:
-def nyc_pigeon_organizer(data)
-  new_hash = Hash.new
-  name_array = Array.new
-  data.each do |kx, x| #x = color,gender,lives
-      x.each do |ky, y| #y = array of subColor,subGender,subLives
-        y.each do |z| #z = "name"
-          name_array << z
-        end
-      end
-  end
-  name_array.uniq.each do |name|
-    new_hash[name] = Hash.new
-    data.each do |a, b|
-      new_hash[name][a] = Array.new
-      b.each do |c, d|
-        if d.include?(name)
-          new_hash[name][a] << c
-        end
-      end
-    end
-  end
-  return new_hash
-end
+
+

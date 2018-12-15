@@ -119,7 +119,7 @@ def nyc_pigeon_organizer(data)
 
     new_hash.each do |name, values|
         values.each do |hash_val, hash_arr|
-            data.each do |attribute, value|
+            data.each do |attributes, value|
                 value.each do |val, arr|
                     arr.each do |element|
                         if element == name && hash_val == attributes

@@ -111,7 +111,7 @@ def nyc_pigeon_organizer(data)
                     new_hash[name] = {}
                     new_hash[name][attributes] = []
                 else
-                    new_hash[name][attributes]
+                    new_hash[name][attributes] = []
                 end
             end
         end

@@ -122,8 +122,8 @@ def nyc_pigeon_organizer(data)
             data.each do |attribute, value|
                 value.each do |val, arr|
                     arr.each do |element|
-                        if element == name && hash_value == attributes
-                            new_hash[name][hash_value] << val.to_s
+                        if element == name && hash_val == attributes
+                            new_hash[name][hash_val] << val.to_s
                         end
                     end
                 end

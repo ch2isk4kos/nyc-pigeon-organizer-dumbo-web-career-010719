@@ -103,8 +103,8 @@
 # Solution 3:
 def nyc_pigeon_organizer(data)
     new_hash = {}
-    
-    data.each do |attributes, values| 
+
+    data.each do |attributes, values|
         values.each do |value, array]
             array.each do |name|
                 if new_hash[name] == nil
